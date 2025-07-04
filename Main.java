@@ -1,22 +1,16 @@
-
 public class Main {
-    public static void main(String[] args){
-        Pelicula peliculaNueva = new Pelicula("la la land", "damien chazelle", 100);
-        peliculaNueva.mostrarInfo();
-    
-        Pelicula pelicula1 = new Pelicula("la la land", "damien chazelle", 100);
-        Pelicula pelicula2 = new Pelicula();
-        Pelicula pelicula3 = new Pelicula("whiplash");
-        Pelicula pelicula4 = new Pelicula("damien chazelle", 120);
-
-        System.out.println("la pelicula 1:");
-            pelicula1.mostrarInfo();
-        System.out.println("la pelicula 2:");
-            pelicula2.mostrarInfo();
-        System.out.println("la pelicula 3:");
-            pelicula3.mostrarInfo();
-        System.out.println("la pelicula 4:");
-            pelicula4.mostrarInfo();
+    public static void main(String[] args) {
+        Vehiculo[] vehiculos = new Vehiculo[3];
+        vehiculos[0]= new Camion("abc", 2015, "pepe", 1000);
+        vehiculos[1]= new Moto("dfg", 2018, "francisco", 250);
+        vehiculos[2]= new Auto("hjk", 2021, "lucas", 4);
+        
+        for(Vehiculo v : vehiculos) {
+            v.mostrarDatos();
+            System.out.println("Patente: " + v.patente);
+            System.out.println("Año: " + v.año);
+            System.out.println("Dueño: " + v.dueño);
+            System.out.println("Impuestos: $" + v.calcularImpuestos());
+        }
     }
 }
-
