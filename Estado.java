@@ -1,4 +1,8 @@
+package semaforo;
+
+import javafx.scene.paint.Color;
+
 public interface Estado {
-    void escribir(Documento doc, String texto);
-    void guardar(Documento doc);
+    Estado cambiarEstado();
+    Color getColor();
 }
